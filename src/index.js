@@ -8,16 +8,31 @@ const info = document.getElementById('info');
 const app = document.getElementById('app');
 const getApiButton = document.getElementById('getApi');
 const response = document.getElementById('response');
+const getApiResponse = getApi();
 
-//info.innerHTML =  message;
+
+
+function callbackSuccess(result){
+  console.log(result);
+}
+
+function callbackFail(error){
+  console.log(error);
+}
+
 
 getApiButton.addEventListener('click', function(){
+  response.innerHTML = getApiResponse;
+  //let foodList = getApi();
+  //foodList.then(callbackSuccess, callbackFail);
 
-  let foodList = getApi();
-  console.log(getApi());
-//  response.innerHTML = foodList;
-
+  //console.log(getApi());
+  //response.innerHTML = foodList;
 });
+
+// formFoodGroup.addEventListener('click', function(){
+//   console.log(this);
+// });
 
 /*function getApi(){
 //console.log('getApi call', message);
