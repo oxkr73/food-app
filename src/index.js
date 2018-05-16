@@ -1,33 +1,19 @@
 import message from './message';
 import foodGrid from './views/food_categories';
 import {apiSearch, apiGroups} from  './utils/apiSearch';
-import getApi from  './utils/getApi';
+import {sendRequest, requestResponse} from  './utils/getApi';
 
-const queryGroups = apiGroups();
+// const queryGroups = apiGroups();
 const info = document.getElementById('info');
 const app = document.getElementById('app');
-const getApiButton = document.getElementById('getApi');
+const getApiButton = document.getElementById('getApiBtn');
+const getFoodGroups = sendRequest();
 const response = document.getElementById('response');
-const getApiResponse = getApi();
-
-
-
-function callbackSuccess(result){
-  console.log(result);
-}
-
-function callbackFail(error){
-  console.log(error);
-}
 
 
 getApiButton.addEventListener('click', function(){
-  response.innerHTML = getApiResponse;
-  //let foodList = getApi();
-  //foodList.then(callbackSuccess, callbackFail);
-
-  //console.log(getApi());
-  //response.innerHTML = foodList;
+  //console.log('click', requestResponse);
+  response.innerHTML = requestResponse;
 });
 
 // formFoodGroup.addEventListener('click', function(){
