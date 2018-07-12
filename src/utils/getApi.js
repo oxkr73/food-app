@@ -1,7 +1,7 @@
 import {apiSearch, apiGroups} from  './apiSearch';
 
 let requestResponse = undefined;
-let urlQuery = apiGroups();
+//let urlQuery = apiGroups();
 //console.log('urlQuery '+ urlQuery);
 
 function processFoodForm(responseItems){
@@ -17,12 +17,12 @@ function processFoodForm(responseItems){
   let foodForm = `<form class="form-group" action="" method="post" id="foodGroup">
   ${foodItems.join('')}
   </form>`;
-  
+
   requestResponse = foodForm;
   //response.innerHTML = foodForm;
 }
 
-function sendRequest(){
+function sendRequest(urlQuery){
   let req = new XMLHttpRequest();
   req.open('GET', urlQuery, true);
   req.onreadystatechange = function (aEvt) {

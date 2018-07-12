@@ -1,13 +1,12 @@
 {
-  "name": "nutrition",
+  "name": "ajax",
   "version": "1.0.0",
-  "description": "nutri app",
-  "main": "index.js",
+  "description": "ajax",
+  "main": "./src/js/index.js",
   "scripts": {
+    "dev": "webpack-dev-server --content-base public --hot",
     "build": "webpack",
-    "dev": "webpack-dev-server --content-base dist --hot",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ./src --ext .js"
+    "lint": "eslint ./src/* --ext .js"
   },
   "author": "oxkr",
   "license": "ISC",
@@ -17,13 +16,12 @@
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.2",
     "eslint-loader": "^2.0.0",
-    "mustache": "^2.3.0",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.1",
     "dist": "^0.1.2",
     "jquery": "^3.3.1",
     "npm": "^5.10.0",

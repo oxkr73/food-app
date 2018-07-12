@@ -17,6 +17,6 @@ function apiGroups() {
 
 export {apiSearch, apiGroups};
 // groups list
-//https://api.nal.usda.gov/ndb/list?format=json&lt=g&sort=n&api_key=8cjUgt6qXK0aWcQif1iSBh11IIfD4b1jLhxc1F6J
+// https://api.nal.usda.gov/ndb/list?format=json&lt=g&sort=n&api_key=8cjUgt6qXK0aWcQif1iSBh11IIfD4b1jLhxc1F6J
 
 // https://api.nal.usda.gov/ndb/search/?format=json&q=rice&sort=n&max=15&offset=0&fg=2000&api_key=8cjUgt6qXK0aWcQif1iSBh11IIfD4b1jLhxc1F6J

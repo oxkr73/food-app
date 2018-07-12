@@ -3,11 +3,12 @@ import foodGrid from './views/food_categories';
 import {apiSearch, apiGroups} from  './utils/apiSearch';
 import {sendRequest, requestResponse} from  './utils/getApi';
 
-// const queryGroups = apiGroups();
+const queryGroups = apiGroups();
 const info = document.getElementById('info');
 const app = document.getElementById('app');
 const getApiButton = document.getElementById('getApiBtn');
-const getFoodGroups = sendRequest();
+const getButtonFoodSearch = document.getElementById('buttonFoodSearch');
+const getFoodGroups = sendRequest(queryGroups);
 const response = document.getElementById('response');
 
 
@@ -15,6 +16,21 @@ getApiButton.addEventListener('click', function(){
   //console.log('click', requestResponse);
   response.innerHTML = requestResponse;
 });
+
+buttonFoodSearch.addEventListener('click', function(ev){
+  ev.preventDefault();
+  let searchValue = $('#foodSearch').find('input').val();
+  let apiSearchUrl = apiSearch(searchValue);
+  apiResult();
+  function apiResult(){
+    sendRequest(apiSearchUrl);
+    console.log(apiSearchUrl, apiResult);
+  };
+
+
+});
+
+
 
 // formFoodGroup.addEventListener('click', function(){
 //   console.log(this);
